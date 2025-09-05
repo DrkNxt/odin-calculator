@@ -192,4 +192,68 @@ function getClickedButton(target) {
     }
 }
 
+function getPressedKey(key) {
+    switch (key) {
+        case "0":
+            handleNumberButton("0");
+            break;
+        case "1":
+            handleNumberButton("1");
+            break;
+        case "2":
+            handleNumberButton("2");
+            break;
+        case "3":
+            handleNumberButton("3");
+            break;
+        case "4":
+            handleNumberButton("4");
+            break;
+        case "5":
+            handleNumberButton("5");
+            break;
+        case "6":
+            handleNumberButton("6");
+            break;
+        case "7":
+            handleNumberButton("7");
+            break;
+        case "8":
+            handleNumberButton("8");
+            break;
+        case "9":
+            handleNumberButton("9");
+            break;
+        case ".":
+            handleNumberButton("decimal");
+            break;
+        case "+":
+            handleOperatorButton("add");
+            break;
+        case "+":
+            handleOperatorButton("sub");
+            break;
+        case "*":
+            handleOperatorButton("mul");
+            break;
+        case "/":
+            handleOperatorButton("div");
+            break;
+        case "%":
+            handleOperatorButton("mod");
+            break;
+        case "Escape":
+            handleOperatorButton("clear");
+            break;
+        case "Backspace":
+            handleOperatorButton("back");
+            break;
+        case "Enter":
+            handleOperatorButton("equals");
+            break;
+    }
+    console.log(key);
+}
+
 BUTTONS.addEventListener("click", event => getClickedButton(event.target));
+document.addEventListener("keydown", event => getPressedKey(event.key));
