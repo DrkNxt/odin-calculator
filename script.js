@@ -26,16 +26,25 @@ function div(x, y) {
 }
 
 function mod(x, y) {
-    if (x <= 0 || y == 0) {
+    if (x == 0 || y == 0) {
         return x;
     }
-    let neg = y < 0;
+    let xNeg = false;
+    if (x < 0) {
+        y = -y;
+        x = -x;
+        xNeg = true;
+    }
+    let yNeg = y < 0;
     y = Math.abs(y);
     while (x >= y) {
         x -= y;
     }
-    if (neg && x != 0) {
-        return x-y;
+    if (yNeg && x != 0) {
+        x -= y;
+    }
+    if (xNeg) {
+        x = -x;
     }
     return x;
 }
