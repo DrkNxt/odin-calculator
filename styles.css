@@ -6,12 +6,12 @@ body {
 }
 
 #title {
-    color: #ffffff;
+    color: #00ffbf;
     font-size: 48px;
     margin-top: 64px;
     margin-bottom: 48px;
     text-align: center;
-    text-shadow: 0 0 16px #00ffe5;
+    text-shadow: 0 0 16px #00ffbf;
 }
 
 #calculator {
@@ -70,4 +70,17 @@ button:hover {
 
 button:active {
     box-shadow: inset 2px 4px 8px #000000;
+}
+
+#footer {
+    color: #00ffbf;
+    font-size: 14px;
+    margin-top: 16px;
+    text-shadow: 0 0 8px #00ffbf;
+    text-align: center;
+}
+
+a {
+    color: #00bbff;
+    text-decoration: none;
 }
