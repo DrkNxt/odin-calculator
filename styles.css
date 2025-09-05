@@ -2,19 +2,28 @@ body {
     background-color: #161625;
     display: flex;
     justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#title {
+    color: #ffffff;
+    font-size: 48px;
+    margin-top: 64px;
+    margin-bottom: 48px;
+    text-align: center;
+    text-shadow: 0 0 16px #00ffe5;
 }
 
 #calculator {
     background-color: #595959;
     border-radius: 10px;
     box-shadow: 0 0 32px #000000;
-    margin-top: 5%;
     padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 400px;
-    height: 600px
+    height: 480px
 }
 
 #display {
@@ -22,14 +31,13 @@ body {
     border-radius: 10px;
     box-shadow: inset 0 0 16px #000000;
     color: #ffffff;
-    font-size: 32px;
+    font-size: 42px;
     height: 80px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    padding: 16px;
+    padding: 16px 24px;
     text-align: right;
     width: 100%;
-    overflow-x: auto;
 }
 
 #buttons {
@@ -37,4 +45,24 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     width: 100%;
+}
+
+.row {
+    display: contents;
+}
+
+button {
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px #000000;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.1s;
+}
+
+button:hover {
+    background-color: #444444;
 }

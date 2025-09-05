@@ -18,6 +18,21 @@ function div(x, y) {
     return x/y;
 }
 
+function mod(x, y) {
+    if (x <= 0 || y == 0) {
+        return x;
+    }
+    let neg = y < 0;
+    y = Math.abs(y);
+    while (x >= y) {
+        x -= y;
+    }
+    if (neg && x != 0) {
+        return x-y;
+    }
+    return x;
+}
+
 function operate(x, y, op) {
     switch (op) {
         case "+":
